@@ -23,7 +23,10 @@ def main():
     elif operation == "Exp":
         ergebnis = zahl1 ** zahl2
     elif operation == "√":
-        ergebnis = pow(zahl1,1/zahl2)
+        if zahl2 !=0:
+            ergebnis = pow(zahl1,1/zahl2)
+        else:
+            st.error("Wurzel aus 0 nicht erlaubt")
     elif operation == "/":
         if zahl2 != 0:
             ergebnis = zahl1 / zahl2
